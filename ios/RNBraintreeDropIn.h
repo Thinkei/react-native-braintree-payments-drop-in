@@ -8,15 +8,12 @@
 #import "BraintreeDropIn.h"
 #import "BTCardNonce.h"
 #import "BTDataCollector.h"
-#import "BraintreePaymentFlow.h"
 
-@interface RNBraintreeDropIn : NSObject <RCTBridgeModule, BTViewControllerPresentingDelegate>
+@interface RNBraintreeDropIn : NSObject <RCTBridgeModule>
 
 @property (nonatomic, strong) UIViewController* _Nonnull reactRoot;
 
 @property (nonatomic, strong) BTDataCollector *dataCollector;
-
-@property (nonatomic, strong) NSDictionary *options;
 
 + (void)resolvePayment:(BTDropInResult* _Nullable)result resolver:(RCTPromiseResolveBlock _Nonnull)resolve;
 
